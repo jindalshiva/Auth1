@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Auth</string>
+    <array name="Items" >
+        <item>Refrigerator</item>
+        <item>Bulb</item>
+        <item>Air Conditioner</item>
+        <item>Fan</item>
+        <item>Microwave</item>
+        <item>Television</item>
+        <item>Geyser</item>
+        <item>Washing Machine</item>
+    </array>
+    <array name="Place">
+        <item>Living Room</item>
+        <item>Bed Room</item>
+        <item>Kitchen</item>
+        <item>Bathroom</item>
+        <item>Dinning Room</item>
+    </array>
 </resources>

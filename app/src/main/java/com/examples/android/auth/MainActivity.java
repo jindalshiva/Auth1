@@ -124,9 +124,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 {
                     //if login is successful then
 
-                    //Intent intent = new Intent (MainActivity.this, ProfileMain3Activity.class);
-                    //intent .addFlags (intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    //startActivity (intent);
+                    Intent intent = new Intent (MainActivity.this, Main3Activity.class);
+                    intent .addFlags (intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity (intent);
                     Toast.makeText (getApplicationContext (),"log in",Toast.LENGTH_SHORT).show ();
 
                 }else

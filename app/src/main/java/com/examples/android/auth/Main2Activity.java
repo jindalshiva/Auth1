@@ -15,6 +15,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Main2Activity extends AppCompatActivity implements View.OnClickListener{
 
@@ -35,6 +39,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         progressBar =  (ProgressBar) findViewById (R.id.progressbar);
 
     }
+
     private void registerUser()
     {
         String email = edittextEmail.getText ().toString ().trim ();
@@ -80,6 +85,9 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
                 progressBar.setVisibility (View.GONE);
                 if(task.isSuccessful ())
                 {
+                    Intent intent = new Intent (Main2Activity.this, Main3Activity.class);
+                    intent .addFlags (intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity (intent);
                    Toast.makeText (getApplicationContext (),"You registered successfully",Toast.LENGTH_SHORT).show ();
             }
                 else {
